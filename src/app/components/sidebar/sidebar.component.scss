@@ -3,6 +3,12 @@
     flex-flow: column;
 }
 
+.name {
+    font-size: 2.5em;
+    font-variant: small-caps;
+    padding-left: 30px;
+}
+
 .location, .job {
     display: flex;
     align-items: center;
