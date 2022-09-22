@@ -1,11 +1,11 @@
 <div class="subsection" *ngIf="data">
     <div class="head">
         <div class="head-line">
-            <h2 class="title">{{data.title}}</h2>
+            <p class="title">{{data.title}}</p>
             <p class="location">{{data.location}}</p>
         </div>
         <div class="head-line">
-            <h3 class="subtitle">{{data.subtitle}}</h3>
+            <p class="subtitle">{{data.subtitle}}</p>
             <p class="date">{{data.date?.start}}{{data.date?.end ? ' - ' + data.date?.end: ''}}</p>
         </div>
     </div>
