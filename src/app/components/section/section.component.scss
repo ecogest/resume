@@ -1,3 +1,17 @@
 .section {
     margin: 20px;
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.1em;
+        // font-variant: small-caps;
+    }
+    hr {
+        max-width: 50px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        height: 4px;
+        border:none;
+        background-color: #5C6168;
+    }
 }
