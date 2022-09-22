@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SubSection } from './subsection.type';
 
 @Component({
@@ -7,14 +7,7 @@ import { SubSection } from './subsection.type';
   styleUrls: ['./subsection.component.scss'],
 })
 export class SubsectionComponent implements OnInit {
-  data: SubSection = {
-    title: 'La Redoute',
-    subtitle: 'Data Engineer',
-    items: ['Implement data pipelines with airflow, gcs and gbq'],
-    location: 'Paris',
-    date: { start: 'jan', end: 'feb 2022' },
-  };
-
+  @Input() data?: SubSection;
   constructor() {}
 
   ngOnInit(): void {}

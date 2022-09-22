@@ -1,0 +1,9 @@
+<div class="section">
+
+    <h1 class="title">{{title}}</h1>
+
+    <div class="subsections" *ngFor="let subsection of subsections;">
+        <app-subsection class="subsections" [data]="subsection"></app-subsection>
+    </div>
+
+</div>
