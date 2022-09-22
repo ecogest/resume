@@ -1,7 +1,9 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    // justify-content: space-around;
+    justify-content: center;
+    gap: 25px;
     margin-top: 20px;
 }
 
@@ -11,4 +13,23 @@ img.profile {
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #a4acbc;
+}
+
+li {
+    list-style-type: none;
+    line-height: 1.3em;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.material-icons {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #5C6168;
 }
