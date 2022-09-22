@@ -1,8 +1,17 @@
-.subsection-head {
+.subsection {
+    padding: 5px 0px 10px 0px;
+}
+
+.head-line {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    h2, h3, p {
+        margin: 0.1em;
+    }
 }
 
 .location, .date {
     text-align: right;
+    color: #8a8f97;
 }
