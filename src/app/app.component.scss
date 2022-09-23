@@ -3,6 +3,13 @@
     color: #5C6168;
 }
 
+
+@media screen and (max-width: 700px) {
+    * {
+        font-size: 0.9em;
+    }
+}
+
 .container {
     display: flex;
     height: 100%;
