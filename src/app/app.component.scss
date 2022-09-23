@@ -10,7 +10,7 @@
 
 app-sidebar {
     flex: 25%;
-    min-width: 250px;
+    min-width: 120px;
     max-width: 350px;
     background-color: #E8EAEE;
     overflow: auto;
@@ -19,7 +19,6 @@ app-sidebar {
 .content {
     flex: 75%;
     overflow: auto;
-    min-width: 500px;
     background-color: #f9f9fa;
     display: flex;
     flex-flow: column nowrap;

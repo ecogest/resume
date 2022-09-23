@@ -15,7 +15,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    // padding: 0px 10px 0px 10px;
     p {
         margin: 2px;
     }
@@ -46,4 +45,17 @@ ul {
     margin-top: 0;
     line-height: 1.6em;
     padding-left: 1em;
+}
+
+@media screen and (max-width: 900px) {
+    .name {
+        font-size: 1.8em;
+        padding-left: 10px;
+    }
+    .line {
+        font-size: 0.8em;
+    }
+    ul {
+        padding-left: 0.5em;
+    }
 }
