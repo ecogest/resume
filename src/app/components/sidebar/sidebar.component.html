@@ -1,11 +1,41 @@
 <aside class="sidebar">
     <h1 class="name">Matthieu<br>Jacq</h1>
-    <div class="job">
-        <span class="material-icons md-24 orange">work</span>
+    <div class="line">
+        <span class="material-icons md-24" style="color: #e28743">work</span>
         <p>{{jobTitle}}</p>
     </div>
-    <div class="location">
+    <div class="line">
         <span class="material-icons md-24">location_city</span>
         <p>{{location}}</p>
     </div>
+    <hr>
+    <h2>Sum up</h2>
+    <h3>Web dev stack</h3>
+    <ul>
+        <li class="line" *ngFor="let item of stack">
+            <img src="{{item.icon}}" />
+            <span>{{item.name}}</span>
+          </li>
+    </ul>
+    <h3>Languages</h3>
+    <ul>
+        <li class="line" *ngFor="let item of languages">
+            <img src="{{item.icon}}" />
+            <span>{{item.name}}</span>
+          </li>
+    </ul>
+    <h3>Experience</h3>
+    <ul>
+        <li class="line" *ngFor="let item of experience">
+            <img src="{{item.icon}}" />
+            <span>{{item.name}}</span>
+          </li>
+    </ul>
+    <h3>Studies</h3>
+    <ul>
+        <li class="line" *ngFor="let item of studies">
+            <img src="{{item.icon}}" />
+            <span>{{item.name}}</span>
+          </li>
+    </ul>
 </aside>
