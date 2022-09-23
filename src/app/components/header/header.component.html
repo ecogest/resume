@@ -1,7 +1,7 @@
 <div class="container">
 	<img class="profile" src="assets/profile.jpg" />
 	<ul>
-		<li class="row"><span class="material-icons"> email </span> <span>{{email}}</span></li>
+		<li><a href="mailto:{{email}}" class="row"><span class="material-icons"> email </span> <span>{{email}}</span></a></li>
 		<li class="row"><span class="material-icons"> phone_iphone </span> <span>{{phone}}</span></li>
 		<li><a [href]="github.address" class="row"><i class="devicon-github-original"></i> <span>{{github.name}}</span></a></li>
 		<li><a [href]="linkedin.address" class="row"><i class="devicon-linkedin-plain colored"></i> <span>{{linkedin.name}}</span></a></li>
