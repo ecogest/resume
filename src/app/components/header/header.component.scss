@@ -28,7 +28,6 @@ li {
 }
 
 ul {
-    width: 12em;
     padding: 0;
 }
 
@@ -53,6 +52,9 @@ a {
     text-decoration: none;
     color: #5C6168;
     &:hover {
-        font-weight: bold;
+        .desc {
+          -webkit-text-stroke-width: 0.04em;
+          -webkit-text-stroke-color: #5C6168;
+        }
     }
 }
