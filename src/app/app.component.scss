@@ -16,6 +16,10 @@ app-sidebar {
 
 .content {
     flex: 75%;
+    overflow-y: auto;
     min-width: 500px;
     background-color: #f9f9fa;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // align-items: center;
 }
