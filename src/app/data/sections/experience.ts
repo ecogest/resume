@@ -28,10 +28,10 @@ const stack: SubSection[] = [
 ];
 const experience: SubSection[] = [
   {
-    title: 'HEC',
+    title: 'HEC Paris',
     subtitle: 'Scoring model designer, Coordinator',
     items: ['Implement the scoring model of an ESG business game'],
-    location: 'Paris',
+    location: 'Jouy-en-Josas',
     date: { start: 'apr, sept 2022' },
   },
   {
