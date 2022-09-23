@@ -3,13 +3,14 @@
     align-items: center;
     // justify-content: space-around;
     justify-content: center;
-    gap: 25px;
+    gap: 4em;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 @media screen and (max-width: 600px) {
 .container {
-    flex-direction: column;
+        gap: 1.5em;
+        flex-direction: column;
     }
 }
 
@@ -24,6 +25,10 @@ img.profile {
 li {
     list-style-type: none;
     line-height: 1.3em;
+}
+
+ul {
+    padding: 0;
 }
 
 .row {
