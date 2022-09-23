@@ -15,6 +15,10 @@
     display: flex;
     align-items: center;
     gap: 0.5em;
+    p {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
 }
 
 hr {
@@ -40,8 +44,11 @@ img {
 
 ul {
     margin-top: 0;
-    line-height: 1.6em;
     padding-left: 1em;
+}
+li {
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
 }
 
 @media screen and (max-width: 800px) {
