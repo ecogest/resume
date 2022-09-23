@@ -3,6 +3,29 @@ import {
   SubSection,
 } from 'src/app/components/subsection/subsection.type';
 
+const stack: SubSection[] = [
+  {
+    subtitle: 'Web development (fullstack)',
+    items: [
+      'Frontend: angular (typescript), HTML, CSS/SCSS',
+      'Backend: nestjs (typescript), prisma (ORM)',
+    ],
+  },
+  {
+    subtitle: 'Languages',
+    items: ['typescript', 'python', 'shell', 'C++', 'C'],
+  },
+  {
+    subtitle: 'Other skills',
+    items: [
+      'Version control and CI: git, github, github action, gitlab',
+      'Cloud: GCP',
+      'Containers: Docker, Docker-Compose, Kubernetes',
+      'Databases and data manipulation: SQL (MySQL, PostgreSQL), Google Big Query, Airflow',
+      'Virtualbox',
+    ],
+  },
+];
 const experience: SubSection[] = [
   {
     title: 'La Redoute',
@@ -42,7 +65,10 @@ const studies: SubSection[] = [
   {
     title: 'ENS Paris-Saclay',
     subtitle: 'Normalien, studies in economics and management',
-    items: ['Master in Law, Economics, Management'],
+    items: [
+      'Master in Law, Economics, Management',
+      'Agrégation in economics and management',
+    ],
     location: 'Cachan',
     date: { start: '2013', end: '2017' },
   },
@@ -138,10 +164,11 @@ const internship: SubSection[] = [
 ];
 
 export const sections: Section[] = [
+  { title: 'Programming stack and skills', subsections: stack },
   { title: 'Experience', subsections: experience },
   { title: 'Studies', subsections: studies },
   { title: 'Teaching', subsections: teaching },
-  { title: 'Exams', subsections: exams },
+  // { title: 'Exams', subsections: exams },
   // { title: 'Jury member', subsections: jury },
   // { title: 'Internship', subsections: internship },
 ];

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  jobTitle = 'Full Stack Typescript Developper';
+  jobTitle = 'Developper Applicant';
   location = 'Paris, France';
 
   constructor() {}
