@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { experience } from './data/sections/experience';
+import { sections } from './data/sections/experience';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,5 @@ import { experience } from './data/sections/experience';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'resume';
-  experience = experience;
+  sections = sections;
 }

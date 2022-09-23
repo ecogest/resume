@@ -9,7 +9,10 @@
             <p class="date">{{data.date?.start}}{{data.date?.end ? ' - ' + data.date?.end: ''}}</p>
         </div>
     </div>
-    <ul class="items" *ngFor="let item of data.items">
-        <li class="item">{{item}}</li>
+    <ul class="items">
+        <ng-container  *ngFor="let item of data.items">
+            <li *ngIf="!isSubList(item)" class="item">{{item}}</li>
+            <ul *ngIf="isSubList(item)" class="sublist"><li *ngFor="let i of toList(item)">{{i}}</li></ul>
+        </ng-container>
     </ul>
 </div>

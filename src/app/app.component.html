@@ -12,6 +12,8 @@
   <app-sidebar></app-sidebar>
   <div class="content">
     <app-header></app-header>
-    <app-section title="Profesionnal Experience" [subsections]="experience"></app-section>
+    <ng-container *ngFor="let section of sections;">
+      <app-section [title]="section.title" [subsections]="section.subsections"></app-section>
+    </ng-container>
   </div>
 </div>

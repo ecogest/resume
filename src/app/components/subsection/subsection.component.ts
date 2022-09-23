@@ -10,5 +10,12 @@ export class SubsectionComponent implements OnInit {
   @Input() data?: SubSection;
   constructor() {}
 
+  isSubList(item: string | string[]) {
+    return typeof item != 'string';
+  }
+
+  toList(item: string | string[]) {
+    return item as string[];
+  }
   ngOnInit(): void {}
 }
