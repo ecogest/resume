@@ -25,3 +25,9 @@ app-sidebar {
     align-items: stretch;
     padding: 10px;
 }
+
+@media (min-width: 1600px) and (min-height: 1150px) {
+    .content {
+        flex-flow: column wrap;
+    }
+}

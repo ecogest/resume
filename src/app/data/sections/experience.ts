@@ -39,7 +39,7 @@ const experience: SubSection[] = [
     subtitle: 'Scoring model designer, Coordinator',
     items: ['Implement the scoring model of an ESG business game'],
     location: 'Paris',
-    date: { start: 'april, september 2022' },
+    date: { start: 'apr, sept 2022' },
   },
   {
     title: 'Sorbonne Management School',
