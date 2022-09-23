@@ -24,7 +24,7 @@ img.profile {
 
 li {
     list-style-type: none;
-    line-height: 1.5em;
+    line-height: 1.6em;
 }
 
 ul {
@@ -36,9 +36,12 @@ ul {
     display: flex;
     justify-content: stretch;
     gap: 10px;
-    i,.material-icons {
+    img,.material-icons {
         width: 20px;
         text-align: center;
+    }
+    img {
+        height: 1.2em;
     }
 }
 
