@@ -11,15 +11,17 @@
 app-sidebar {
     flex: 25%;
     min-width: 250px;
+    max-width: 350px;
     background-color: #E8EAEE;
 }
 
 .content {
     flex: 75%;
-    overflow-y: auto;
+    overflow: auto;
     min-width: 500px;
     background-color: #f9f9fa;
-    // display: flex;
-    // flex-flow: column nowrap;
-    // align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    padding: 10px;
 }
