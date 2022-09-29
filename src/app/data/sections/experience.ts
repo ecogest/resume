@@ -112,56 +112,32 @@ const teaching: SubSection[] = [
   },
 ];
 
-const exams: SubSection[] = [
-  {
-    title: 'Agrégation in economics and management',
-    subtitle: 'Options: economics, accounting, finance',
-    items: ['Passed, rank 16th'],
-    location: '',
-    date: { start: '2016', end: '' },
-  },
-  {
-    title: 'ENS Cachan competitive entrance exam (now ENS Paris-Saclay)',
-    subtitle: 'Economics and management, option accounting',
-    items: ['Passed, rank 15e'],
-    location: '',
-    date: { start: '2013', end: '' },
-  },
-];
+// const exams: SubSection[] = [
+//   {
+//     title: 'Agrégation in economics and management',
+//     subtitle: 'Options: economics, accounting, finance',
+//     items: ['Passed, rank 16th'],
+//     location: '',
+//     date: { start: '2016', end: '' },
+//   },
+//   {
+//     title: 'ENS Cachan competitive entrance exam (now ENS Paris-Saclay)',
+//     subtitle: 'Economics and management, option accounting',
+//     items: ['Passed, rank 15e'],
+//     location: '',
+//     date: { start: '2013', end: '' },
+//   },
+// ];
 
-const jury: SubSection[] = [
-  {
-    title: '',
-    subtitle: '',
-    items: [''],
-    location: '',
-    date: { start: '', end: '' },
-  },
-  {
-    title: '',
-    subtitle: '',
-    items: [''],
-    location: '',
-    date: { start: '', end: '' },
-  },
-  {
-    title: '',
-    subtitle: '',
-    items: [''],
-    location: '',
-    date: { start: '', end: '' },
-  },
-];
-
-const internship: SubSection[] = [
-  {
-    title: '',
-    subtitle: '',
-    items: [''],
-    location: '',
-    date: { start: '', end: '' },
-  },
-];
+// const internship: SubSection[] = [
+//   {
+//     title: '',
+//     subtitle: '',
+//     items: [''],
+//     location: '',
+//     date: { start: '', end: '' },
+//   },
+// ];
 
 export const sections: Section[] = [
   { title: 'Programming stack and skills', subsections: stack },
@@ -169,6 +145,5 @@ export const sections: Section[] = [
   { title: 'Studies', subsections: studies },
   { title: 'Teaching', subsections: teaching },
   // { title: 'Exams', subsections: exams },
-  // { title: 'Jury member', subsections: jury },
   // { title: 'Internship', subsections: internship },
 ];
