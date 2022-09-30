@@ -29,7 +29,7 @@ const stack: SubSection[] = [
 
 const stack_fr: SubSection[] = [
   {
-    subtitle: 'Web development (fullstack)',
+    subtitle: 'Développement web (fullstack)',
     items: [
       'Frontend: angular (typescript), HTML, CSS/SCSS',
       'Backend: nestjs (typescript), prisma (ORM)',
