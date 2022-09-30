@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { LangService, supportedLangs } from 'src/app/services/lang.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent implements OnInit {
-  jobTitle = 'Developer Applicant';
+export class SidebarComponent implements OnInit, OnDestroy {
+  jobTitle = { en: 'Developer Applicant', fr: 'Développeur' };
   location = 'Paris, France';
   stack = [
     {
@@ -57,6 +60,7 @@ export class SidebarComponent implements OnInit {
     },
     {
       name: 'Teacher',
+      name_fr: 'Enseignant',
       icon: 'https://management.pantheonsorbonne.fr/favicon/favicon-32x32.png',
     },
   ];
@@ -72,7 +76,48 @@ export class SidebarComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  private _sectionsTitles = {
+    en: {
+      stack: 'Web dev stack',
+      languages: 'Languages',
+      experience: 'Experience',
+      studies: 'Studies',
+    },
+    fr: {
+      stack: 'Web dev stack',
+      languages: 'Langages',
+      experience: 'Expérience',
+      studies: 'Études',
+    },
+  };
+  sectionTitles = this._sectionsTitles.en;
 
-  ngOnInit(): void {}
+  lang: supportedLangs = this.langService.currentLang.value;
+  private langSubscription?: Subscription;
+
+  constructor(
+    private langService: LangService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private cd: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
+    this.langSubscription = this.langService.currentLang.subscribe((lang) => {
+      this.lang = lang;
+      this.sectionTitles = this._sectionsTitles[lang];
+      this.cd.detectChanges(); // see https://angular.io/errors/NG0100
+    });
+  }
+  ngOnDestroy() {
+    this.langSubscription?.unsubscribe();
+  }
+
+  switchLang(checked: boolean) {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { lang: checked ? 'fr' : null },
+      queryParamsHandling: 'merge',
+    });
+  }
 }

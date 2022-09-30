@@ -2,36 +2,46 @@
     <h1 class="name">Matthieu<br>Jacq</h1>
     <div class="line">
         <span class="material-icons md-24" style="color: #e28743">work</span>
-        <p>{{jobTitle}}</p>
+        <p>{{jobTitle[lang]}}</p>
     </div>
     <div class="line">
         <span class="material-icons md-24">location_city</span>
         <p>{{location}}</p>
     </div>
+
     <hr>
-    <h2>Summary</h2>
-    <h3>Web dev stack</h3>
+    <!-- ------------------------------------------------------------------- -->
+
+    <!-- LANG SWITCH BUTTON -->
+    <div class="button-container">
+        <label class="switch" [class.checked]="checkboxLang.checked">
+            <input #checkboxLang [checked]="lang == 'fr'" (change)="switchLang(checkboxLang.checked)" type="checkbox" />    <div></div>
+        </label>
+    </div>
+
+    <!-- <h2>Summary</h2> -->
+    <h3>{{sectionTitles.stack}}</h3>
     <ul>
         <li class="line" *ngFor="let item of stack">
             <img src="{{item.icon}}" />
             <span class="desc">{{item.name}}</span>
           </li>
     </ul>
-    <h3>Languages</h3>
+    <h3>{{sectionTitles.languages}}</h3>
     <ul>
         <li class="line" *ngFor="let item of languages">
             <img src="{{item.icon}}" />
             <span class="desc">{{item.name}}</span>
           </li>
     </ul>
-    <h3>Experience</h3>
+    <h3>{{sectionTitles.experience}}</h3>
     <ul>
         <li class="line" *ngFor="let item of experience">
             <img src="{{item.icon}}" />
-            <span class="desc">{{item.name}}</span>
+            <span class="desc">{{lang == 'fr' && item?.name_fr ? item.name_fr : item.name}}</span>
           </li>
     </ul>
-    <h3>Studies</h3>
+    <h3>{{sectionTitles.studies}}</h3>
     <ul>
         <li class="line" *ngFor="let item of studies">
             <img src="{{item.icon}}" />
