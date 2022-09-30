@@ -14,7 +14,7 @@
 
     <!-- LANG SWITCH BUTTON -->
     <div class="button-container">
-        <label class="switch" [class.checked]="checkboxLang.checked">
+        <label class="switch tooltip" data-title="switch lang: en/fr" [class.checked]="checkboxLang.checked">
             <input #checkboxLang [checked]="lang == 'fr'" (change)="switchLang(checkboxLang.checked)" type="checkbox" />    <div></div>
         </label>
     </div>

@@ -66,6 +66,23 @@ li {
     margin: auto;
     margin-top: 0.6em;
 }
+.tooltip {
+    position: relative;
+}
+.tooltip:hover::after 
+{
+    content: attr(data-title);
+    padding: 5px;
+    width: 9em;
+    text-align: center;
+    border: 1px solid #AAAAAA;
+    border-radius: 1em;
+    position: absolute;
+    bottom: 2em;
+    left: -3.3em;
+    font-size: 0.6em;
+    background: #E8EAEE;
+}
 
 .switch input {
     position: absolute;
