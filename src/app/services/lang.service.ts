@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 
 export type supportedLangs = 'fr' | 'en';
 export type translatable<T> = { fr: T; en: T };
@@ -32,6 +32,6 @@ export class LangService {
   }
 
   translate<T>(item: translatable<T>) {
-    return item[this._currentLang.value];
+    return this.currentLang.pipe(map((lang) => item[lang]));
   }
 }

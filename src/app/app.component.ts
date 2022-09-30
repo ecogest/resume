@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Section } from './components/subsection/subsection.type';
 import { sections } from './data/sections/experience';
 import { LangService } from './services/lang.service';
@@ -9,20 +9,14 @@ import { LangService } from './services/lang.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, OnDestroy {
-  sections: Section[];
-  private _sectionsSubscription?: Subscription;
+export class AppComponent implements OnInit {
+  sections: Observable<Section[]>;
 
   constructor(private langService: LangService) {
     this.sections = langService.translate(sections);
   }
 
   ngOnInit(): void {
-    this._sectionsSubscription = this.langService.currentLang.subscribe(() => {
-      this.sections = this.langService.translate(sections);
-    });
-  }
-  ngOnDestroy(): void {
-    this._sectionsSubscription?.unsubscribe();
+    this.sections = this.langService.translate(sections);
   }
 }
