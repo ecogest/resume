@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { icons } from 'src/assets/assets';
+import { icons, images } from 'src/assets/assets';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,7 @@ import { icons } from 'src/assets/assets';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  profile = images.profile;
   email = 'matthieu.jacq@live.fr';
   phone = '06 15 85 41 10';
   github = {
