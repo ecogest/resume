@@ -9,6 +9,7 @@ import { icons, images } from 'src/assets/assets';
 export class HeaderComponent implements OnInit {
   profile = images.profile;
   email = 'matthieu.jacq@live.fr';
+  website = 'ecogest.github.io/resume';
   phone = '06 15 85 41 10';
   github = {
     name: 'ecogest',
