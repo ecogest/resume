@@ -112,7 +112,7 @@ li {
     font-size: 20px; /* 1 */
     height: 1em;
     width: 2em;
-    background-image: url("https://flagicons.lipis.dev/flags/4x3/wf.svg"); // fr
+    background-image: url("/assets/icons/flags/fr.svg");
     background-size: 1.2em;
     background-repeat: no-repeat;
     background-position: right;
@@ -120,7 +120,7 @@ li {
     border-radius: 1em;
 }
 .switch.checked::before {
-    background-image: url("https://flagicons.lipis.dev/flags/4x3/gb.svg"); // en
+    background-image: url("/assets/icons/flags/en.svg");
     background-position: left;
 }
 
@@ -132,7 +132,7 @@ li {
     width: 1.1em;
     border-radius: 1.1em;
     background: #FFF;
-    background-image: url("https://flagicons.lipis.dev/flags/4x3/gb.svg"); // en
+    background-image: url("/assets/icons/flags/en.svg");
     background-size: 1.1em;
     background-position: center;
     box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
@@ -142,7 +142,7 @@ li {
 }
 
 .switch input:checked + div {
-    background-image: url("https://flagicons.lipis.dev/flags/4x3/wf.svg"); // fr
+    background-image: url("/assets/icons/flags/fr.svg");
     -webkit-transform: translate3d(100%, 0, 0);
     -moz-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);

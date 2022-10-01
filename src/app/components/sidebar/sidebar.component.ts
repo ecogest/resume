@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { LangService, supportedLangs } from 'src/app/services/lang.service';
+import { icons } from 'src/assets/assets';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,68 +13,28 @@ export class SidebarComponent implements OnInit, OnDestroy {
   jobTitle = { en: 'Developer Applicant', fr: 'Développeur' };
   location = 'Paris, France';
   stack = [
-    {
-      name: 'angular',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
-    },
-    {
-      name: 'nestjs',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg',
-    },
-    {
-      name: 'prisma',
-      icon: 'https://www.prisma.io/images/favicon-32x32.png',
-    },
+    { name: 'angular', icon: icons.stack.angular },
+    { name: 'nestjs', icon: icons.stack.nestjs },
+    { name: 'prisma', icon: icons.stack.prisma },
   ];
 
   languages = [
-    {
-      name: 'typescript',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-    },
-    {
-      name: 'python',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    },
-    {
-      name: 'shell',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
-    },
-    {
-      name: 'C++',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
-    },
-    {
-      name: 'C',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
-    },
+    { name: 'typescript', icon: icons.stack.typescript },
+    { name: 'python', icon: icons.stack.python },
+    { name: 'shell', icon: icons.stack.shell },
+    { name: 'C++', icon: icons.stack.cpp },
+    { name: 'C', icon: icons.stack.c },
   ];
 
   experience = [
-    {
-      name: 'Business game designer',
-      icon: 'https://www.hec.edu/themes/custom/hec_theme/logo.svg',
-    },
-    {
-      name: 'Data Engineer',
-      icon: 'https://www.laredoute.fr/images/favicon.png',
-    },
-    {
-      name: 'Teacher',
-      name_fr: 'Enseignant',
-      icon: 'https://management.pantheonsorbonne.fr/favicon/favicon-32x32.png',
-    },
+    { name: 'Business game designer', icon: icons.org.hec },
+    { name: 'Data Engineer', icon: icons.org.redoute },
+    { name: 'Teacher', name_fr: 'Enseignant', icon: icons.org.sorbonne },
   ];
 
   studies = [
-    {
-      name: '42',
-      icon: 'https://42.fr/wp-content/uploads/2021/07/cropped-42-favicon-acs-32x32.png',
-    },
-    {
-      name: 'ENS Paris-Saclay',
-      icon: 'https://ens-paris-saclay.fr/themes/ens/favicon.ico',
-    },
+    { name: '42', icon: icons.org.school42 },
+    { name: 'ENS Paris-Saclay', icon: icons.org.ens },
   ];
 
   private _sectionsTitles = {
