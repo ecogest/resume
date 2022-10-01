@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Section } from './components/subsection/subsection.type';
 import { sections } from './data/sections/experience';
@@ -9,14 +9,10 @@ import { LangService } from './services/lang.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   sections: Observable<Section[]>;
 
-  constructor(private langService: LangService) {
+  constructor(langService: LangService) {
     this.sections = langService.translate(sections);
-  }
-
-  ngOnInit(): void {
-    this.sections = this.langService.translate(sections);
   }
 }
