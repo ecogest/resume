@@ -10,7 +10,7 @@
 
 app-sidebar {
     position: fixed;
-    width: min(max(25%, 125px), 350px);
+    width: min(max(25%, 135px), 350px);
     height: 100%;
     background-color: #E8EAEE;
     overflow: auto;
@@ -19,7 +19,7 @@ app-sidebar {
 
 .content {
     position: relative;
-    margin-left: min(max(25%, 125px), 350px);
+    margin-left: min(max(25%, 135px), 350px);
     height: 100%;
     overflow: auto;
     display: flex;
