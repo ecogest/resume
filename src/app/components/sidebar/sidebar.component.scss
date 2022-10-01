@@ -69,6 +69,7 @@ $flag-fr: url("https://flagicons.lipis.dev/flags/4x3/wf.svg");
     margin: auto;
     margin-top: 0.6em;
 }
+@media print { .button-container { display: none; } }
 
 @media (hover: hover) {
     .tooltip {

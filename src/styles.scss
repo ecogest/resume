@@ -1,5 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    // print background color
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+@page {
+    // no margin on print
+    margin: 0;
+    size: A4 portrait;
+}
 html, body {
     margin: 0;
     height: 100%;
+    background-color: #f9f9fa;
+}
+
+@media print {
+    html, body { background-color: white; }
 }
