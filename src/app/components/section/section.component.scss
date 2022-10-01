@@ -22,3 +22,7 @@
         background-color: #5C6168;
     }
 }
+
+@media print {
+    .section { background-color: #f3f4f6; }
+}

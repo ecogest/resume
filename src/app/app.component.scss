@@ -16,7 +16,11 @@ app-sidebar {
     overflow: auto;
 }
 @media print {
-    app-sidebar { position: absolute; height: 200%; }
+    app-sidebar {
+        position: absolute;
+        height: 200%;
+        background-color: #f3f4f6;
+    }
 }
 
 .content {
