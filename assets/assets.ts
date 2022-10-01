@@ -1,3 +1,5 @@
+// we should link our images as '/assets/...' but 'assets'
+// because our site won't be exposed at the root of the domain (ecogest.github.io/resume)
 export const images = {
   profile: 'assets/profile.jpg',
 };
@@ -25,6 +27,7 @@ export const icons = {
     linkedin: 'assets/icons/social/linkedin.svg', // https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg
   },
   flag: {
+    // can't use those in css. (rq: /assets/... would work locally)
     en: 'assets/icons/flags/en.svg', // https://flagicons.lipis.dev/flags/4x3/gb.svg
     fr: 'assets/icons/flags/fr.svg', // https://flagicons.lipis.dev/flags/4x3/wf.svg
   },
