@@ -8,12 +8,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
 
-<div class="container">
-  <app-sidebar></app-sidebar>
-  <div class="content">
-    <app-header></app-header>
-    <ng-container *ngFor="let section of sections | async;">
-      <app-section [title]="section.title" [subsections]="section.subsections"></app-section>
-    </ng-container>
-  </div>
+<app-sidebar></app-sidebar>
+<div class="content">
+  <app-header></app-header>
+  <ng-container *ngFor="let section of sections | async;">
+    <app-section [title]="section.title" [subsections]="section.subsections"></app-section>
+  </ng-container>
 </div>

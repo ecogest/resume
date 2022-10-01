@@ -13,8 +13,12 @@ html, body {
     margin: 0;
     height: 100%;
     background-color: #f9f9fa;
+    overflow: hidden;
 }
 
 @media print {
-    html, body { background-color: white; }
+    html, body {
+        overflow: visible;
+        background-color: white;
+    }
 }

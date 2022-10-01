@@ -18,13 +18,10 @@ app-sidebar {
 @media print { app-sidebar { position: absolute; } }
 
 .content {
-    width: stretch;
+    position: relative;
     margin-left: min(max(25%, 125px), 350px);
     height: 100%;
-    position: relative;
-    float: right;
     overflow: auto;
-    background-color: #f9f9fa;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
@@ -33,4 +30,11 @@ app-sidebar {
 
 @media (min-width: 1700px) and (min-height: 1180px) {
     .content { flex-flow: column wrap; }
+}
+
+@media print {
+    .content {
+        display: block;
+        overflow: visible;
+    }
 }
