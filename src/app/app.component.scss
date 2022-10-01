@@ -15,7 +15,9 @@ app-sidebar {
     background-color: #E8EAEE;
     overflow: auto;
 }
-@media print { app-sidebar { position: absolute; } }
+@media print {
+    app-sidebar { position: absolute; height: 200%; }
+}
 
 .content {
     position: relative;
