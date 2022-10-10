@@ -13,11 +13,10 @@
     <!-- ------------------------------------------------------------------- -->
 
     <!-- LANG SWITCH BUTTON -->
-    <div class="button-container">
-        <label class="switch tooltip" data-title="switch lang: en/fr" [class.checked]="checkboxLang.checked">
-            <input #checkboxLang [checked]="lang == 'fr'" (change)="switchLang(checkboxLang.checked)" type="checkbox" />    <div></div>
-        </label>
-    </div>
+    <label class="switch tooltip" data-title="switch lang: en/fr">
+        <input #checkboxLanguage type="checkbox" (click)="switchLang(checkboxLanguage.checked)" [checked]="lang == 'fr'">
+        <span class="slider round"></span>
+    </label>
 
     <!-- <h2>Summary</h2> -->
     <h3>{{sectionTitles.stack}}</h3>
